@@ -1,0 +1,397 @@
+:root {
+  --color-primary: hsl(189, 61%, 49%);
+  --color-secondary: hsl(181, 50%, 10%);
+  --color-tertiary: hsl(241, 80%, 20%);
+  --color-accent: hsl(121, 80%, 20%);
+}
+
+.dark {
+  --color-primary: hsl(181, 50%, 10%);
+  --color-secondary: hsl(181, 50%, 90%);
+  --color-tertiary: hsl(241, 80%, 80%);
+  --color-accent: hsl(121, 80%, 80%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: aliceblue;
+}
+
+/*! Header Section ********************************************************/
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+}
+
+.header h1 {
+  color: var(--color-secondary);
+  font-size: 2rem;
+}
+
+.span {
+  color: var(--color-primary);
+}
+
+.new-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: white;
+  font-size: 1.2rem;
+  padding: 14px;
+  margin-right: 25px;
+  gap: 10px;
+  color: var(--color-primary);
+  border-radius: 8px;
+  box-shadow: 1px 1px 10px -2px var(--color-primary);
+  cursor: pointer;
+  transition: box-shadow .3s linear;
+  font-weight: bold;
+}
+
+.new-btn:hover {
+  box-shadow: 1px 1px 15px 0px currentColor;
+}
+
+.new-btn:active {
+  transition: box-shadow 0s linear;
+  box-shadow: 1px 1px 20px 1px currentColor;
+}
+
+/*! Homepage Section ******************************************************/
+
+.homepage,
+.file-display,
+.transcribe-section,
+.info-section {
+  width: 700px;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage h1 {
+  font-size: 5rem;
+
+}
+
+.homepage h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  color: var(--color-primary);
+  font-size: 1.4rem;
+}
+
+.record-btn {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  padding-bottom: 8px;
+  width: 60%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  margin: 10px 0;
+  color: var(--color-secondary);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: box-shadow .3s linear;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px -2px var(--color-primary);
+  cursor: pointer;
+}
+
+.record-btn p {
+  color: var(--color-primary);
+  margin-left: 6px;
+}
+
+.record-btn:hover {
+  box-shadow: 1px 1px 15px -2px var(--color-primary);
+
+}
+
+.recording-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 4px;
+  gap: 6px;
+}
+
+.homepage label {
+  cursor: pointer;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+}
+
+.homepage label:hover {
+  color: hsl(180, 91%, 46%);
+}
+
+.upload-input {
+  display: none;
+}
+
+.free-msg {
+  margin-top: 20px;
+  font-style: italic;
+  opacity: .7;
+}
+
+.recording-mic {
+  color: rgba(230, 11, 11, 0.858);
+}
+
+/*! File Display Section  *******************************************************/
+
+.file-display h1 {
+  font-size: 5rem;
+}
+
+.audio-name {
+  background-color: white;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 6px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  width: 60%;
+  font-size: 1.1rem;
+  border: none;
+  margin: 20px 0;
+  color: var(--color-secondary);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: box-shadow .3s linear;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px -2px var(--color-primary);
+  gap: 10px;
+
+}
+
+.file-display h3 {
+  font-size: 1.2rem;
+}
+
+.btn-container {
+  width: 56%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.reset-btn {
+  border: none;
+  background-color: white;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: transparent;
+  box-shadow: 1px 1px 3px var(--color-accent);
+  border-radius: 5px;
+  color: rgb(92, 92, 92);
+}
+
+.reset-btn:hover {
+  box-shadow: 1px 1px 5px var(--color-accent);
+}
+
+.reset-btn:active {
+  box-shadow: 1px 1px 8px var(--color-accent);
+}
+
+.transcribe-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: white;
+  font-size: 1rem;
+  padding: 12px;
+  gap: 10px;
+  color: var(--color-primary);
+  border-radius: 8px;
+  box-shadow: 1px 1px 10px -2px var(--color-primary);
+  cursor: pointer;
+  transition: box-shadow .3s linear;
+  font-weight: bold;
+}
+
+.transcribe-btn:hover {
+  box-shadow: 1px 1px 15px -1px currentColor;
+
+}
+
+.transcribe-btn:active {
+  transition: box-shadow 0s linear;
+  box-shadow: 1px 1px 20px 0px currentColor;
+}
+
+/*! Transcribe Section ************************************************************/
+
+.transcribing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.transcribing h1 {
+  color: var(--color-primary);
+  font-size: 4rem;
+}
+
+.cylinders {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.cylinder-item {
+  width: 100%;
+  height: 10px;
+  background-color: grey;
+  border-radius: 10px;
+}
+
+/*! Cylinder Animation   *********************************/
+
+.loading {
+  animation: width 5s linear infinite;
+  margin-right: auto;
+}
+
+.loading1 {
+  animation-delay: -3s;
+}
+
+.loading2 {
+  animation-delay: -1s;
+}
+
+@keyframes width {
+  0% {
+    width: 100%;
+  }
+
+  10% {
+    width: 72%;
+  }
+
+  20% {
+    width: 35%;
+  }
+
+  30% {
+    width: 40%;
+  }
+
+  40% {
+    width: 48%;
+  }
+
+  50% {
+    width: 65%;
+  }
+
+  60% {
+    width: 46%;
+  }
+
+  70% {
+    width: 37%;
+  }
+
+  80% {
+    width: 66%;
+  }
+
+  90% {
+    width: 76%;
+  }
+
+  100% {
+    width: 100%;
+  }
+
+}
+
+/*! İnformation Section ***********************************************/
+
+.info-section h1 {
+  font-size: 3.5rem;
+  letter-spacing: -1px;
+}
+
+.toggle-btn-container {
+  margin-top: 10px;
+  /* border: 2px solid var(--color-primary); */
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 1px 1px 2px var(--color-primary);
+}
+
+.translate-btn,
+.transcription-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.translate-btn {
+  padding: 5px 28px;
+}
+
+.transcription-btn {
+  padding-left: 22px;
+}
+
+/*? Button toggle styles ****/
+
+.transcription {
+  background-color: var(--color-primary);
+  color: aliceblue;
+}
+
+.translate {
+  background-color: var(--color-primary);
+  color: aliceblue;
+}
